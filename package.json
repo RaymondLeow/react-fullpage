@@ -15,9 +15,9 @@
   "homepage": "https://github.com/alvarotrigo/react-fullpage",
   "types": "types/index.d.ts",
   "scripts": {
-    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
-    "build:dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx webpack --progress --mode development --config webpack.config.dev.js",
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && NODE_ENV=prod webpack --mode production --progress --mode production --config webpack.config.build.js",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider && cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
+    "build:dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider && npx webpack --progress --mode development --config webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=prod webpack --mode production --progress --config webpack.config.build.js",
     "test:cypress": "npx cypress run --spec 'cypress/integration/*'",
     "test:jest": "npx jest",
     "cypress:open": "cypress open"
